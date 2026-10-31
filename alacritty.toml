@@ -1,0 +1,100 @@
+# Hearth — saturated warm-dark. Exact mirror of nvim's lua/hearth.lua NIGHT
+# palette and of the chroma values in ~/.tmux.conf. Ember accent on a
+# near-black warm canvas; the ANSI set follows the same warm-left / cool-right
+# syntax split, so a stack trace in the terminal reads the same as the source
+# that produced it.
+# Every ANSI colour is >= 4.5:1 against the canvas (WCAG AA).
+[general]
+live_config_reload = true
+
+[window]
+opacity = 0.97
+startup_mode = "Maximized"
+decorations = "None"
+dynamic_title = true
+resize_increments = true
+dynamic_padding = true
+
+[window.padding]
+x = 12
+y = 16
+
+[font]
+size = 20.0
+normal.family = "Lilex Nerd Font"
+normal.style = "Regular"
+# BlexMono ships no true bold/italic cuts, so map them onto the Regular face
+# and let the terminal's synthetic weight do the work. Without this, bold code
+# silently renders identical to regular.
+bold.family = "Lilex Nerd Font"
+bold.style = "Regular"
+italic.family = "Lilex Nerd Font"
+italic.style = "Regular"
+bold_italic.family = "Lilex Nerd Font"
+bold_italic.style = "Regular"
+
+[font.offset]
+x = 0
+y = 1
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+unfocused_hollow = true
+thickness = 0.15
+
+
+[scrolling]
+history = 50000
+multiplier = 3
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[terminal]
+osc52 = "CopyPaste"
+
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.enabled]]
+command = "xdg-open"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "U", mods = "Control|Shift" }
+
+# Colors (Gruvbox dark)
+
+# Default colors
+[colors.primary]
+# hard contrast background = = '#1d2021'
+background = '#282828'
+# soft contrast background = = '#32302f'
+foreground = '#ebdbb2'
+
+# Normal colors
+[colors.normal]
+black   = '#282828'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#a89984'
+
+# Bright colors
+[colors.bright]
+black   = '#928374'
+red     = '#fb4934'
+green   = '#b8bb26'
+yellow  = '#fabd2f'
+blue    = '#83a598'
+magenta = '#d3869b'
+cyan    = '#8ec07c'
+white   = '#ebdbb2'
